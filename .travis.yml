@@ -1,0 +1,21 @@
+language: node_js
+node_js:
+- '12'
+branches:
+  only:
+  - master
+  - develop
+  - "/^v.*$/"
+before_script:
+- npm install
+before_deploy:
+- npm run prerelease
+deploy:
+  provider: npm
+  email: code@lekschas.de
+  api_key:
+    secure: uCJS47dnu/sX4nAoGD+wahAwFHO9va/Z/Etqa2Ei7ZGx8Zu3UeyWw1Qn3yhyky6VH2Wv59Y01aEE8YWz3QqIgcjT6PUxB67keYpa9YxUL0hWlSJavNAYrYWD5NvXHNJLbfqroryo1LEUOGk1V0lpTQZUylPZm/mkCpzvE4g5yxl62uUfoe7Ssn7vzSJdrxpTnQtgrFfHTRZ9xCzdNK2hPmURCW4nkmx/p1x6+in8z8PlhQDsnussb8BiDz3VPalJo3xqvYQcWZQ1bjpnjYYfZRc6BdtusuaPv/5CisShXIJRINwXLy4ILNXTAm++0zSBAz794yKhVgV37zTbtWzM44ZvjJCSs0xL1ddh6/Hhl+SArlcF2NDiKe/pfzAUhQ1y6SP4Y/4paJX172QW+sx+ZLUTf+v+vwW0wkuutjAFyBXECrq/e/k9ailuk2v/Ne1QQYPiq/1UmUesFiOk3CWsWC8Gf3pHcz6jgv1IjwaKltvjsLzYTbllbn6KTiFK9oad4lS4quXROK5Bgb4xGFr3lQYXTGd2cCLjac59cqP6wktS/lj8IsU46C7nQuHNfQ2xUbyOCb6b+gTtq293YRTVwREwtySgJCp2ygzg7/QZOhA1wdZbgY1mNQsfAPP0nEbz/N3EGoHKVZaQgxKlcGioCULz48h/3C5gGHfZ2MOOuMc=
+  on:
+    tags: true
+    repo: flekschas/higlass-svelte
+  skip_cleanup: 'true'
