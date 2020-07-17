@@ -12,8 +12,6 @@
 
   const dispatch = createEventDispatcher();
 
-  let element;
-
   const updateHiGlass = () => {
     if (!api) return;
     if (debug) console.log('Update HiGlass...', viewConfig, options);
@@ -23,11 +21,24 @@
     })
   }
 
+  let element;
+  // Only needed to ensure that the parent component cannot overwrite the
+  // api reference
+  let _api;
+
   $: updateHiGlass(viewConfig);
 
   onMount(() => {
     if (debug) console.log('Initialize HiGlass...', viewConfig, options);
-    api = higlass.viewer(element, viewConfig, options);
+    _api = higlass.viewer(element, viewConfig, options);
+    api = _api;
+    dispatch('ready');
+  });
+
+  onDestroy(() => {
+    if (debug) console.log('Good bye! Destroying HiGlass now...');
+    _api.destroy();
+    dispatch('destroy');
   });
 </script>
 
