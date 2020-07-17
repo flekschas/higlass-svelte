@@ -18,7 +18,6 @@
   let codeMirrorSet;
 
   const loadViewConfig = async () => {
-    console.log('load view config', viewConfigId);
     whenViewConfig = fetch(`${viewConfigBaseUrl}${viewConfigId}`)
       .then((response) => {
         if (response.ok) return response.json();

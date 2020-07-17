@@ -24,7 +24,6 @@
   // because it's difficult to update an editor
   // without resetting scroll otherwise
   export async function set(new_code, new_mode) {
-    console.log('SET CODEMIRROR', new_mode)
     if (new_mode !== mode) {
       await createEditor(mode = new_mode);
     }
