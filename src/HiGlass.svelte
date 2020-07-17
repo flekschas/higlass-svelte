@@ -1,7 +1,6 @@
 <script>
   import higlass from 'higlass';
-  import { HiGlassComponent } from 'react';
-  import { createEventDispatcher, onMount } from 'svelte';
+  import { createEventDispatcher, onDestroy, onMount } from 'svelte';
 
   export let api = null;
   export let viewConfig = 'https://higlass.io/api/v1/viewconfs?d=default';
@@ -18,8 +17,8 @@
     api.setViewConfig(viewConfig);
     Object.entries(options).forEach(([key, value]) => {
       api.option(key, value);
-    })
-  }
+    });
+  };
 
   let element;
   // Only needed to ensure that the parent component cannot overwrite the
@@ -37,7 +36,7 @@
 
   onDestroy(() => {
     if (debug) console.log('Good bye! Destroying HiGlass now...');
-    _api.destroy();
+    if (_api) _api.destroy();
     dispatch('destroy');
   });
 </script>
