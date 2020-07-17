@@ -21,13 +21,13 @@
 
 ## Install
 
-```
+```bash
 npm i higlass-svelte
 ```
 
 ## Get Started
 
-```
+```html
 <script>
   import HiGlass from 'higlass-svelte';
 
