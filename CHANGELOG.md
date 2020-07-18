@@ -1,3 +1,7 @@
+## v0.1.3
+
+- Add minified ES bundle
+
 ## v0.1.2
 
 - Include all third-party libraries except svelte into the ES bundle

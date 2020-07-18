@@ -19,6 +19,7 @@
   },
   "files": [
     "higlass-svelte.js",
+    "higlass-svelte.min.js",
     "src/HiGlass.svelte"
   ],
   "main": "higlass-svelte.js",
