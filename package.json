@@ -24,7 +24,7 @@
   ],
   "main": "index.js",
   "module": "index.js",
-  "svelte": "src/Modal.svelte",
+  "svelte": "src/HiGlass.svelte",
   "scripts": {
     "build": "rollup -c component.rollup.config.js",
     "autobuild": "rollup -w -c demo.rollup.config.js",
