@@ -4,4 +4,4 @@ public/assets
 public/bundle.*
 package-lock.json
 yarn.lock
-index.js
+higlass-svelte.js

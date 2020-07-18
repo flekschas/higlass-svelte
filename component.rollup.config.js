@@ -3,6 +3,7 @@ import commonjs from '@rollup/plugin-commonjs';
 import resolve from '@rollup/plugin-node-resolve';
 import filesize from 'rollup-plugin-filesize';
 import svelte from 'rollup-plugin-svelte';
+import nodePolyfills from 'rollup-plugin-node-polyfills';
 
 import { main } from './package.json';
 
@@ -21,6 +22,12 @@ export default {
       },
     },
   ],
-  plugins: [svelte(), resolve(), commonjs(), filesize()],
-  external: ['pixi.js', 'react', 'react-dom', 'react-bootstrap', 'svelte'],
+  plugins: [
+    svelte(),
+    resolve({ browser: true, preferBuiltins: true }),
+    commonjs(),
+    nodePolyfills(),
+    filesize(),
+  ],
+  external: ['svelte'],
 };
