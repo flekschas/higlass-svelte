@@ -5,3 +5,4 @@ public/bundle.*
 package-lock.json
 yarn.lock
 higlass-svelte.js
+higlass-svelte.min.js
