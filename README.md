@@ -14,7 +14,7 @@
   
   [![NPM Version](https://img.shields.io/npm/v/higlass-svelte.svg?style=flat-square&color=7f99ff)](https://npmjs.org/package/higlass-svelte)
   [![Build Status](https://img.shields.io/travis/flekschas/higlass-svelte?color=a17fff&style=flat-square)](https://travis-ci.org/flekschas/higlass-svelte/)
-  [![File Size](http://img.badgesize.io/https://unpkg.com/higlass-svelte/HiGlass.svelte?compression=gzip&style=flat-square&color=e17fff)](https://unpkg.com/higlass-svelte/src/HiGlass.svelte)
+  [![File Size](http://img.badgesize.io/https://unpkg.com/higlass-svelte/higlass-svelte.min.js?compression=gzip&style=flat-square&color=e17fff)](https://unpkg.com/higlass-svelte/)
   [![Code Style Prettier](https://img.shields.io/badge/code%20style-prettier-ff7fe1.svg?style=flat-square)](https://github.com/prettier/prettier#readme)
   
 </div>
